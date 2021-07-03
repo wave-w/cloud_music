@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/video/viedo",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/recommentsong/recommentsong",
+    "pages/songdetail/songdetail",
+    "pages/search/search"
+  ],
+  "entryPagePath":"pages/index/index",
+  "window": {
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "网易云音乐"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/image/2.jpg",
+        "selectedIconPath": "/static/image/2.jpg"
+      },
+      {
+        "pagePath": "pages/video/viedo",
+        "text": "视频",
+        "iconPath": "/static/image/2.jpg",
+        "selectedIconPath": "/static/image/2.jpg"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/static/image/2.jpg",
+        "selectedIconPath": "/static/image/2.jpg"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

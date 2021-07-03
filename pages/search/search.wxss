@@ -1,0 +1,121 @@
+/* pages/search/search.wxss */
+.searchpagbox{
+  height: 100%;
+  width: 100%;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+.navsearch{
+  position: relative;
+  display: flex;
+  margin: 10rpx 0;
+}
+.navsearch .icon-search1{
+   position: absolute;
+   top: 13rpx;
+   left: 20rpx;
+}
+.navsearch input{
+  flex: 1;
+  height: 60rpx;
+  padding-left: 70rpx;
+  background-color: rgba(233,233,233,0.3);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+.navsearch .cancel{
+  margin-left: 10rpx;
+  width: 150rpx;
+  line-height: 60rpx;
+}
+
+
+/* 热搜榜 */
+.hotsearch .title{
+  height: 80rpx;
+  width: 660rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+}
+.hotsearch .hotsearchlist{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotsearch .hotsearchlist .hotsearchitem{
+  width: 50%;
+  margin: 20rpx 0;
+}
+.hotsearch .hotsearchlist .hotsearchitem text{
+  margin-right: 20rpx;
+}
+.hotsearch .hotsearchlist .hotsearchitem image{
+  position: absolute;
+  width:30rpx;
+  height:30rpx;
+}
+
+
+/* 搜索结果列表 */
+
+.searchresultlist .title{
+  height: 80rpx;
+  width: 660rpx;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #948eda;
+  /* background-color: red; */
+  border-bottom: 1px solid #000;
+}
+
+.searchresultlist .searchbox{
+  display: flex;
+  flex-direction: column;
+}
+.searchresultlist .searchbox .searchitem {
+  width: 660rpx;
+  border-bottom: 1px solid #eee;
+}
+.searchresultlist .searchbox .searchitem text{
+ margin-right: 20rpx;
+ line-height: 80rpx;
+}
+
+
+/* 搜索历史 */
+.searchhostory{
+  display: flex; 
+  width: 660rpx;
+  margin: 10rpx 0;
+}
+.searchhostory text{
+ font-size: 26rpx;
+ color: #948eda;
+ margin-top: 25rpx;
+}
+.historyotembox{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.historyotembox .historyitem{
+  margin-left: 20rpx;
+  margin-top: 26rpx;
+  padding: 5rpx 20rpx;
+  border-radius: 50rpx;
+  background-color: #eee;
+}
+.historyotembox text{
+  font-size: 20rpx;
+  color: #000;
+}
+.historyotembox .historyitem .itemtext{
+  font-size: 20rpx;
+  color: #000;
+}
+.icon-shanchu{
+  width: 100rpx;
+  padding-top: 6rpx;
+  text-align: center;
+  font-size: 26rpx !important;
+}

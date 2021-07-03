@@ -1,0 +1,6 @@
+<!--components/NavHeard/index.wxml-->
+<text>{{title}}</text>
+<view class="navheard">
+  <text>{{maintext}}</text>
+  <view bindtap="lookmore">查看更多</view>
+</view>

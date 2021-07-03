@@ -1,0 +1,45 @@
+<view class="videobox">
+<!-- 顶部搜索区域 -->
+<view class="search" bindtap="tosearchpage">
+<image src="/static/image/1.jpg"></image>
+<text>{{searchdata.showKeyword}}</text>
+<image src="/static/image/2.jpg"></image>
+</view>
+
+<!-- 头部导航区域 -->
+<view class="heaedmenu">
+  <scroll-view scroll-x enable-flex class="heaedmenu_scroll" scroll-into-view="{{'id'+itemid}}" scroll-with-animation>
+      <view class="{{item.id===itemid?'active':''}}" wx:for="{{navmenus}}" wx:key="id"  id="{{'id'+item.id}}" 
+      bindtap="viewclick" >{{item.name}}</view>
+  </scroll-view>
+</view>
+
+<!-- 视频主内容区域 -->
+<scroll-view class="mainvideolist" scroll-y enable-flex refresher-enabled bindrefresherrefresh="downrefresh"
+refresher-triggered="{{refreshtriggered}}" bindscrolltolower="scrolltolower">
+<view class="videoshow" wx:for="{{videolist}}" wx:key="index">
+<image src="{{item.data.coverUrl}}" bindtap="playvideo" id="{{item.data.vid}}"  wx:if="{{!(item.data.vid === videoid)}}"></image>
+<video src="{{item.data.urlInfo.url}}" bindplay="playvideo" id="{{item.data.vid}}" poster="{{item.data.coverUrl}}"
+wx:else object-fit="cover" bindtimeupdate="timeuoload" bindended="videoend"></video>
+
+
+<view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-buoumaotubiao15"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn" open-type="share">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+</view>
+</scroll-view>
+</view>

@@ -1,0 +1,119 @@
+/* pages/index/index.wxss */
+
+/* 轮播区域 */
+.swiperbox{
+  height: 300rpx;
+}
+.swiperbox image{
+  height: 100%;
+  width: 100%;
+}
+/* 文本导航图标区域 */
+.navbox{
+  display: flex;
+  justify-content: space-around;
+}
+.navitem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.navitem .iconfont{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: #fff;
+  margin: 20rpx 0; 
+  background-color: #d43c33;
+}
+.navitem text{
+  font-size: 25rpx;
+}
+
+/* 推荐歌曲区域 */
+
+.recommendbox{
+  display: flex;
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx;
+  flex-direction: column;
+  /* background-color: red; */
+}
+.recommendbox text{
+ font-size: 20rpx;
+ font-weight: 200;
+}
+.mainrecom{
+  display: flex;
+  margin-top: 20rpx;
+  height: 300rpx;
+  /* background-color: red; */
+}
+.recomitem{
+  margin-right:20rpx ;
+  width: 200rpx;
+  /* background-color: red; */
+}
+.recomitem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.recommendbox .recomitem text{
+  font-size: 26rpx;
+  /* 单行文本溢出 */
+  /* display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  
+  /* 多行文本溢出 */
+  /* white-space: wrap; */
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;  /*设置对齐模式*/
+  -webkit-line-clamp: 2;   /*行数*/
+}
+
+
+/* 排行榜区域 */
+.ranking{
+  display: flex;
+  width: 100%;
+  padding: 20rpx;
+  flex-direction: column;
+}
+.hotsongswiper{
+  height: 600rpx;
+}
+.title{
+ font-size: 30rpx;
+ margin: 20rpx 0;
+}
+.musicitem{
+  display: flex;
+  width: 95%;
+  margin: 5rpx 0;
+  background-color: #fbfbfb;
+}
+.musicitem image{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 10rpx;
+}
+.musicitem text{
+  line-height: 100rpx;
+  width: 100rpx;
+  text-align: center;
+}
+.musicitem .itemname{
+  width: 500rpx;
+  padding-left: 30rpx;
+  text-align: left;
+}

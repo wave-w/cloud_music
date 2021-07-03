@@ -1,0 +1,27 @@
+text {
+  font-size: 20rpx;
+  font-weight: 200;
+}
+
+.navheard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navheard text {
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+.navheard view {
+  margin: 0 50rpx;
+  height: 40rpx;
+  width: 140rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 20rpx;
+  border: 1px solid;
+  border-radius: 20rpx;
+}

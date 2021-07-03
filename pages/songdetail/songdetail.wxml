@@ -1,0 +1,28 @@
+<!--pages/songdetail/songdetail.wxml-->
+<view class="songdetailbox">
+  <!-- 主区域 -->
+<view class="singer">{{detail.ar[0].name}}</view>
+<view class="circle"></view>
+<image class="needle  {{isplay?'needleplay':''}}" src="/static/image/song/needle.png"></image>
+<view class="playsongs">
+<image class="disc" src="/static/image/song/disc.png"></image>
+<image class="singerpic  {{isplay?'singerpicframes':''}}" src="{{detail.al.picUrl}}"></image>
+</view>
+<!-- 进度条区域 -->
+<view class="musicprogress">
+ <text>{{musicnowtime}}</text>
+ <view class="round"  style="left:{{(120+musicnowwidth) + 'rpx'}}"></view>
+ <view class="progress" bindtap="progresstap"></view>
+ <view class="onprogress" style="width:{{musicnowwidth + 'rpx'}}"></view>
+ <text>{{musicalltime}}</text>
+</view>
+
+<!-- 底部播放区域按钮 -->
+<view class="music_contral">
+  <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+  <text class="iconfont icon-shangyishou" bindtap="handprevious"></text>
+  <text class="iconfont big {{isplay?'icon-zanting':'icon-bofang'}}" bindtap="playnusic"></text>
+  <text class="iconfont icon-next"  bindtap="handsnext"></text>
+  <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+</view>
+</view>

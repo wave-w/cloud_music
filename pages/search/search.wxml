@@ -1,0 +1,43 @@
+<!--pages/search/search.wxml-->
+<view class="searchpagbox">
+  <!-- 顶部搜索栏 -->
+  <view class="navsearch">
+    <text class="iconfont icon-search1"></text>
+    <input type="text" placeholder="{{searchdefault.realkeyword}}" bindinput='inputvalue'
+      model:value="{{inputvalue}}" />
+    <text class="cancel" bindtap="tovideopage">取消</text>
+  </view>
+  <!-- 搜索历史 -->
+  <view class="searchhostory" wx:if="{{historylist.length}}">
+    <text>搜索历史</text>
+    <view class="historyotembox">
+      <view class="historyitem" wx:for="{{historylist}}" wx:key="item">
+        <view class="itemtext">{{item}}</view>
+      </view>
+      <text class="iconfont icon-shanchu" bindtap="deleteallhistory"></text>
+    </view>
+  </view>
+  <!-- 热搜榜 -->
+  <view class="hotsearch" wx:if="{{!inputvalue}}">
+    <view class="title">热搜榜</view>
+    <!-- 热搜列表 -->
+    <view class="hotsearchlist">
+      <view class="hotsearchitem" wx:for="{{searchlist}}" wx:key="score"  data-searchresult="{{item.searchWord}}" bindtap="getsearchresult">
+        <text>{{index+1}}</text>
+        <text>{{item.searchWord}}</text>
+        <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索列表结果展示 -->
+  <view class="searchresultlist" wx:else>
+    <view class="title">搜索内容"{{inputvalue}}"</view>
+    <view class="searchbox">
+      <view class="searchitem" data-searchresult="{{item.name}}" bindtap="getsearchresult" wx:for="{{searchresultlist}}" wx:key="id">
+        <text class="iconfont icon-search1"></text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/recommentsong.wxml-->
+<view class="recommentbox">
+  <!-- 头部区域 -->
+  <view class="heard">
+    <image src="/static/image/1.jpg"></image>
+    <view class="date">
+      <text>{{date}}</text>
+    </view>
+  </view>
+
+  <!-- 主体区域 -->
+  <view class="mainsong">
+    <view class="mainheard">
+      <text>播放全部</text>
+      <text>多选</text>
+    </view>
+    <!-- 内容区 -->
+    <scroll-view class="mainsongbox" scroll-y enable-flex>
+      <view wx:for="{{songslist}}" wx:key="id" bindtap="todetail" data-song="{{item}}">
+      <image src="{{item.album.blurPicUrl}}"></image>
+       <view class="maintext"> 
+        <text>{{item.name}}</text>
+        <text>{{item.album.artists[0].name}}</text>
+       </view>
+        <text class="iconfont icon-gengduo" bindtap="icontap"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
